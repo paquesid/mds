@@ -28,8 +28,8 @@ export const lightColors = {
   hoverGrey: "#E6EAEB",
   pressedGrey: "#D5D7D8",
   actionDisabledGrey: "#E7EAEB",
-  mainBlue: "#07193E",
-  hoverBlue: "#0D2453",
+  mainBlue: "#1E92A3",
+  hoverBlue: "#1a7f8e",
   pressedBlue: "#05132F",
   mainRed: "#C51B3F",
   hoverRed: "#FCF2F4",
@@ -105,7 +105,7 @@ export const lightColors = {
 
 export const darkColors = {
   dark: "#181F2A",
-  sectionOneBG: "#283140",
+  sectionOneBG: "linear-gradient(5deg, rgba(33, 33, 33, 1) 20%, rgba(20, 72, 80, 1) 36%, rgba(33, 33, 33, 1) 80%)",
   defaultFontColor: "#C4C9D0",
   bulletColor: "#4B586A",
   borderColor: "#8E98A9",

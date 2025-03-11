@@ -43,85 +43,89 @@ import Enterprise from "./Logos/Enterprise/Enterprise";
 import MinIOEnterprise from "./Logos/MinIO/MinIOEnterprise";
 import MinIOEnterpriseOS from "./Logos/MinIO/MinIOEnterpriseOS";
 import MinIOEnterpriseOSVertical from "./Logos/MinIO/MinIOEnterpriseOSVertical";
+const logoLight = require("../assets/logo/paques-light.svg");
+const logoDark = require("../assets/logo/paques-light.svg");
 
 const ApplicationLogo: FC<ApplicationLogoProps> = ({
+  darkMode,
   applicationName,
   subVariant = "simple",
   inverse,
   onClick,
 }) => {
-  switch (applicationName) {
-    case "console":
-      switch (subVariant) {
-        case "standard":
-          return <ConsoleStandard inverse={!!inverse} onClick={onClick} />;
-        case "enterprise":
-          return <ConsoleEnterprise inverse={!!inverse} onClick={onClick} />;
-        case "AGPL":
-          return <ConsoleAGPL inverse={!!inverse} onClick={onClick} />;
-        default:
-          return <ConsoleSingle inverse={!!inverse} onClick={onClick} />;
-      }
-      break;
-    case "directpv":
-      return <DirectPV inverse={!!inverse} onClick={onClick} />;
-    case "subnet":
-      return <SUBNET inverse={!!inverse} onClick={onClick} />;
-    case "kes":
-      return <KES inverse={!!inverse} onClick={onClick} />;
-    case "operator":
-      return <Operator inverse={!!inverse} onClick={onClick} />;
-    case "subnetops":
-      return <SubnetOPS inverse={!!inverse} onClick={onClick} />;
-    case "cloud":
-      return <Cloud inverse={!!inverse} onClick={onClick} />;
-    case "releases":
-      return <Releases inverse={!!inverse} onClick={onClick} />;
-      break;
-    case "vmbroker":
-      return <VMBroker inverse={!!inverse} onClick={onClick} />;
-      break;
-    case "eureka":
-      switch (subVariant) {
-        case "new":
-          return <EurekaNew inverse={!!inverse} onClick={onClick} />;
-        default:
-          return <Eureka inverse={!!inverse} onClick={onClick} />;
-      }
-      break;
-    case "kms":
-      return <KMS inverse={!!inverse} onClick={onClick} />;
-    case "loadbalancer":
-      return <LoadBalancer inverse={!!inverse} onClick={onClick} />;
-    case "index":
-      return <IndexLogo inverse={!!inverse} onClick={onClick} />;
-    case "cache":
-      return <Cache inverse={!!inverse} onClick={onClick} />;
-    case "monitor":
-      return <Monitor inverse={!!inverse} onClick={onClick} />;
-    case "observe":
-      return <Observe inverse={!!inverse} onClick={onClick} />;
-    case "missioncontrol":
-      return <MissionControl inverse={!!inverse} onClick={onClick} />;
-    case "globalconsole":
-      return <GlobalConsole inverse={!!inverse} onClick={onClick} />;
-    case "enterprise":
-      return <Enterprise inverse={!!inverse} onClick={onClick} />;
-    case "minio":
-      switch (subVariant) {
-        case "enterprise":
-          return <MinIOEnterprise inverse={!!inverse} onClick={onClick} />;
-          break;
-        case "enterpriseos":
-          return <MinIOEnterpriseOS inverse={!!inverse} onClick={onClick} />;
-        case "enterpriseosvertical":
-          return (
-            <MinIOEnterpriseOSVertical inverse={!!inverse} onClick={onClick} />
-          );
-        default:
-          return <ThemedLogo onClick={onClick} />;
-      }
-  }
+  return darkMode ? <img src={logoLight} onClick={onClick} /> : <img src={logoDark} onClick={onClick} />
+  // switch (applicationName) {
+  //   case "console":
+  //     switch (subVariant) {
+  //       case "standard":
+  //         return <ConsoleStandard inverse={!!inverse} onClick={onClick} />;
+  //       case "enterprise":
+  //         return <ConsoleEnterprise inverse={!!inverse} onClick={onClick} />;
+  //       case "AGPL":
+  //         return <ConsoleAGPL inverse={!!inverse} onClick={onClick} />;
+  //       default:
+  //         return <ConsoleSingle inverse={!!inverse} onClick={onClick} />;
+  //     }
+  //     break;
+  //   case "directpv":
+  //     return <DirectPV inverse={!!inverse} onClick={onClick} />;
+  //   case "subnet":
+  //     return <SUBNET inverse={!!inverse} onClick={onClick} />;
+  //   case "kes":
+  //     return <KES inverse={!!inverse} onClick={onClick} />;
+  //   case "operator":
+  //     return <Operator inverse={!!inverse} onClick={onClick} />;
+  //   case "subnetops":
+  //     return <SubnetOPS inverse={!!inverse} onClick={onClick} />;
+  //   case "cloud":
+  //     return <Cloud inverse={!!inverse} onClick={onClick} />;
+  //   case "releases":
+  //     return <Releases inverse={!!inverse} onClick={onClick} />;
+  //     break;
+  //   case "vmbroker":
+  //     return <VMBroker inverse={!!inverse} onClick={onClick} />;
+  //     break;
+  //   case "eureka":
+  //     switch (subVariant) {
+  //       case "new":
+  //         return <EurekaNew inverse={!!inverse} onClick={onClick} />;
+  //       default:
+  //         return <Eureka inverse={!!inverse} onClick={onClick} />;
+  //     }
+  //     break;
+  //   case "kms":
+  //     return <KMS inverse={!!inverse} onClick={onClick} />;
+  //   case "loadbalancer":
+  //     return <LoadBalancer inverse={!!inverse} onClick={onClick} />;
+  //   case "index":
+  //     return <IndexLogo inverse={!!inverse} onClick={onClick} />;
+  //   case "cache":
+  //     return <Cache inverse={!!inverse} onClick={onClick} />;
+  //   case "monitor":
+  //     return <Monitor inverse={!!inverse} onClick={onClick} />;
+  //   case "observe":
+  //     return <Observe inverse={!!inverse} onClick={onClick} />;
+  //   case "missioncontrol":
+  //     return <MissionControl inverse={!!inverse} onClick={onClick} />;
+  //   case "globalconsole":
+  //     return <GlobalConsole inverse={!!inverse} onClick={onClick} />;
+  //   case "enterprise":
+  //     return <Enterprise inverse={!!inverse} onClick={onClick} />;
+  //   case "minio":
+  //     switch (subVariant) {
+  //       case "enterprise":
+  //         return <MinIOEnterprise inverse={!!inverse} onClick={onClick} />;
+  //         break;
+  //       case "enterpriseos":
+  //         return <MinIOEnterpriseOS inverse={!!inverse} onClick={onClick} />;
+  //       case "enterpriseosvertical":
+  //         return (
+  //           <MinIOEnterpriseOSVertical inverse={!!inverse} onClick={onClick} />
+  //         );
+  //       default:
+  //         return <ThemedLogo onClick={onClick} />;
+  //     }
+  // }
 };
 
 export default ApplicationLogo;
