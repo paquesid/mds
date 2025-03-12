@@ -43,17 +43,15 @@ import Enterprise from "./Logos/Enterprise/Enterprise";
 import MinIOEnterprise from "./Logos/MinIO/MinIOEnterprise";
 import MinIOEnterpriseOS from "./Logos/MinIO/MinIOEnterpriseOS";
 import MinIOEnterpriseOSVertical from "./Logos/MinIO/MinIOEnterpriseOSVertical";
-const logoLight = require("../assets/logo/paques-light.svg");
-const logoDark = require("../assets/logo/paques-light.svg");
+const logo = require("../assets/logo/logo-paques.png");
 
 const ApplicationLogo: FC<ApplicationLogoProps> = ({
-  darkMode,
   applicationName,
   subVariant = "simple",
   inverse,
   onClick,
 }) => {
-  return darkMode ? <img src={logoLight} onClick={onClick} /> : <img src={logoDark} onClick={onClick} />
+  return <img src={logo} onClick={onClick} />
   // switch (applicationName) {
   //   case "console":
   //     switch (subVariant) {

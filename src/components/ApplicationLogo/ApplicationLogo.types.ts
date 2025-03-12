@@ -17,7 +17,6 @@
 import React from "react";
 
 export interface ApplicationLogoProps {
-  darkMode: boolean;
   applicationName:
     | "console"
     | "operator"

@@ -77,7 +77,7 @@ export const lightColors = {
   secondActionActive: "#07506A",
   mainOrange: "#FFBD62",
   menuBackground:
-    "linear-gradient(90deg, rgba(2,49,80,1) 0%, rgba(0,39,77,1) 50%, rgba(11,34,69,1) 100%)",
+    "linear-gradient(5deg, rgba(33, 33, 33, 1) 20%, rgba(20, 72, 80, 1) 36%, rgba(33, 33, 33, 1) 80%)",
   menuDropArrowColor: "#8399AB",
   menuDropArrowBackground: "#0A1C3C",
   menuSelectedOption:
@@ -159,7 +159,7 @@ export const darkColors = {
   secondActionHover: "#297E9D",
   secondActionActive: "#145B76",
   mainOrange: "#fCCE9D",
-  menuBackground: "#242D3E",
+  menuBackground: "linear-gradient(5deg, rgba(33, 33, 33, 1) 20%, rgba(20, 72, 80, 1) 36%, rgba(33, 33, 33, 1) 80%)",
   menuDropArrowColor: "#8E98A9",
   menuDropArrowBackground: "#1C2436",
   menuSelectedOption: "linear-gradient(90deg, rgba(0,0,0,0) 0%, #1B212C 100%)",
