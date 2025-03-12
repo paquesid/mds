@@ -428,7 +428,6 @@ type GridProps = GridCommonProps & ConditionalProps;
 declare const Grid: FC<GridProps>;
 
 interface LoginWrapperProps {
-    darkMode: boolean;
     logoProps: ApplicationLogoProps;
     form: ReactNode;
     formFooter?: ReactNode;

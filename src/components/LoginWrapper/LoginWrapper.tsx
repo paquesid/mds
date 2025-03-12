@@ -162,7 +162,6 @@ const CustomLogin = styled.div(({ theme }) => {
 });
 
 const LoginWrapper: FC<LoginWrapperProps> = ({
-  darkMode,
   logoProps,
   form,
   formFooter,
@@ -205,7 +204,7 @@ const LoginWrapper: FC<LoginWrapperProps> = ({
         <Grid item xs={12} className={"formPanel"}>
           <Grid container>
             <Grid item xs={12} className={"logoContainer"}>
-              <ApplicationLogo {...logoProps} darkMode={darkMode} />
+              <ApplicationLogo {...logoProps} />
             </Grid>
             <Grid item xs={12} className={"formContainer"}>
               <Grid item xs className={"form"}>
