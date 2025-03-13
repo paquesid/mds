@@ -1,0 +1,1 @@
+<Paques inverse={!!inverse} onClick={onClick} />;

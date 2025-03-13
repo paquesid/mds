@@ -43,7 +43,7 @@ import Enterprise from "./Logos/Enterprise/Enterprise";
 import MinIOEnterprise from "./Logos/MinIO/MinIOEnterprise";
 import MinIOEnterpriseOS from "./Logos/MinIO/MinIOEnterpriseOS";
 import MinIOEnterpriseOSVertical from "./Logos/MinIO/MinIOEnterpriseOSVertical";
-const logo = require("../assets/logo/logo-paques.png");
+import Paques from "./Logos/Paques/Paques";
 
 const ApplicationLogo: FC<ApplicationLogoProps> = ({
   applicationName,
@@ -51,7 +51,7 @@ const ApplicationLogo: FC<ApplicationLogoProps> = ({
   inverse,
   onClick,
 }) => {
-  return <img src={logo} onClick={onClick} />
+  return <Paques inverse={!!inverse} onClick={onClick} />;
   // switch (applicationName) {
   //   case "console":
   //     switch (subVariant) {
